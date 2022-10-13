@@ -1,0 +1,26 @@
+button {
+    background: #FF9514;
+    color: white;
+    font-family: Nekst;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    width: 426px;
+    height: 68px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+}
+
+button:active {
+    background: silver;
+}
+
+button:disabled {
+    background: #FF9514;
+    opacity: 40;
+    cursor: not-allowed;
+}
