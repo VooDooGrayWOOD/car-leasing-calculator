@@ -1,0 +1,10 @@
+.costCar {
+    position: relative;
+}
+
+.costCar:after {
+    content: '₽';
+    position: relative;
+    left: -30px;
+    z-index: 10;
+}

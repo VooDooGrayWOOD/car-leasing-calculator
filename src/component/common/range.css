@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 427px;
+    margin-top: 30px;
 }
 
 .rangeValue {
@@ -13,6 +14,8 @@
     font-size: 36px;
 }
 
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -23,7 +26,10 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     outline: none;
+    width: 379px;
     height: 2px;
+    margin-top: -2px;
+    margin-left: 24px;
     background-image: linear-gradient(#ff9800, #ff9800);
     background-repeat: no-repeat;
 }

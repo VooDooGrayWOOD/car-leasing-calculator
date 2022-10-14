@@ -1,11 +1,19 @@
 import React from "react";
+import "./costCar.css"
 import Range from "../common/range";
 
 const CostCar = () => {
+const data = {
+   defaultValue: "3300000",
+   min: "1000000",
+   max: "6000000"
+}
+
+
+
   return (
     <div>
-      <p>Стоимость автомобиля</p>
-      <Range min="1000000" max="6000000" />
+      <Range className="costCar" min={data.min} max={data.max} defaultValue={data.defaultValue} label="Стоимость автомобиля" />
     </div>
   );
 };
