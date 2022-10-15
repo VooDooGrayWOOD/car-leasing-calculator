@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./range.css";
 
-const Range = ({min, max, label, defaultValue}) => {
+const Range = ({min, max, step, label, defaultValue}) => {
   const [value, setValue] = useState(defaultValue);
-
   const getBackgroundSize = () => {
     return { backgroundSize: `${(value * 100) / 10}% 100%` };
   };
@@ -20,6 +19,7 @@ const Range = ({min, max, label, defaultValue}) => {
         className="rangeValue"
         type="number"
         value={value}
+        step={step}
         onChange={handleChange}
       />
       <input
@@ -28,6 +28,7 @@ const Range = ({min, max, label, defaultValue}) => {
         value={value}
         min={min}
         max={max}
+        step={step}
         onChange={handleChange}
         style={getBackgroundSize()}
       />
