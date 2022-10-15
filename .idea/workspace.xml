@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cc2e6ee-3b3e-490a-ad1f-06a3302ed250" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/component/common/range.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/common/range.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ui/initialPayment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ui/initialPayment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ui/leaseTerm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ui/leaseTerm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665794651486</updated>
-      <workItem from="1665794653276" duration="4020000" />
+      <workItem from="1665794653276" duration="4146000" />
     </task>
     <servers />
   </component>
