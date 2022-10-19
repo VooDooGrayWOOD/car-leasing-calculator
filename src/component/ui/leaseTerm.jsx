@@ -1,15 +1,25 @@
 import React from "react";
+import "./style/leaseTerm.css"
 import Range from "../common/range";
+import environment from "../../environment/environment";
+import {useDispatch, useSelector} from "react-redux";
 
 const LeaseTerm = () => {
-    const data = {
-        defaultValue: "60",
-        min: "1",
-        max: "60"
+    const dispatch = useDispatch()
+    const month = useSelector(state => state.leaseTerm.month)
+    const handleChangeMonth = (event) => {
+        dispatch({type: 'CHANGE_MONTH', payload: event.target.valueAsNumber})
     }
   return (
-    <div>
-      <Range min={data.min} max={data.max} label="Срок лизинга" defaultValue={data.defaultValue}/>
+    <div className="field__wrapper">
+      <Range
+          min={environment.termMin}
+          max={environment.termMax}
+          label="Срок лизинга"
+          value={month}
+          onChange={handleChangeMonth}
+      />
+        <div className="field__unit">мес.</div>
     </div>
   );
 };

@@ -1,42 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import Range from "../common/range";
-import "./initialPayment.css";
-
+import "./style/initialPayment.css";
+import environment from "../../environment/environment";
+import { useDispatch, useSelector } from "react-redux";
 
 const InitialPayment = () => {
-  const dataPayment = {
-    defaultValue: "13",
-    min: "10",
-    max: "60",
-  };
-  const [value, setValue] = useState(dataPayment.defaultValue);
-  console.log(value);
+  const dispatch = useDispatch()
 
-  const handleChange = (e) => {
-    setValue(e.target.valueAsNumber);
-  };
+  const payment = useSelector(state => state.initialPayment.payment)
+  const percent = useSelector(state => state.initialPayment.percent)
+  const carPrice = useSelector(state => state.costCar.price)
+
+  const handleChangePercent = (event) => {
+    dispatch({type: 'CHANGE_PERCENT', payload: event.target.valueAsNumber})
+  }
+
+  const paymentCar = () => {
+     return Math.round(carPrice * (percent / 100))
+  }
+
+  const handleChangePayment = () => {
+    dispatch({type: 'CHANGE_PAYMENT', payload: paymentCar()})
+  }
 
   return (
-    <div>
-      <form>
+    <div className="field__wrapper">
         <Range
           className="initialPayment"
-          min={dataPayment.min}
-          max={dataPayment.max}
+          value={payment}
+          min={environment.feeMin}
+          max={environment.feeMax}
           step="5"
-          defaultValue={dataPayment.defaultValue}
           label="Первоначальный взнос"
+          onChange={handleChangePercent}
         />
         <input
           className="percentInitialPayment"
-          min={dataPayment.min}
-          max={dataPayment.max}
-          step="5"
-          type="text"
-          defaultValue={`${dataPayment.defaultValue}%`}
-          onChange={handleChange}
+          // type="text"
+          value={`${percent}%`}
+          onChange={handleChangePayment()}
         />
-      </form>
     </div>
   );
 };

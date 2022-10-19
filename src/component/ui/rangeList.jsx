@@ -2,8 +2,7 @@ import React from 'react';
 import CostCar from "./costCar";
 import InitialPayment from "./initialPayment";
 import LeaseTerm from "./leaseTerm";
-import AmountLeaseAgreement from "./amountLeaseAgreement";
-import MonthlyPayment from "./monthlyPayment";
+import ResultList from "./resultList";
 
 const RangeList = () => {
 
@@ -12,8 +11,7 @@ const RangeList = () => {
             <CostCar />
             <InitialPayment />
             <LeaseTerm />
-            <AmountLeaseAgreement />
-            <MonthlyPayment />
+            <ResultList />
         </div>
     );
 };

@@ -1,0 +1,25 @@
+.field__wrapper {
+    position: relative;
+    width: 420px;
+}
+
+.initialPayment {
+    position: relative;
+    /*width: 100%;*/
+    /*padding-right: 70px;*/
+}
+
+.percentInitialPayment {
+    position: absolute;
+    border: none;
+    border-radius: 16px;
+    background: #EBEBEC;
+    font-family: Nekst, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 0;
+    right: 0;
+    top: 57px;
+    width: 69px;
+    height: 54px;
+}
