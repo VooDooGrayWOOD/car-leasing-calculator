@@ -1,22 +1,20 @@
 import React from "react";
 
-const AmountLeaseAgreement = ({initialPay, month, result}) => {
-    console.log(initialPay);
-    console.log(month);
-    const resultAmountLeaseAgreement = () => {
-        const data = initialPay + month * Math.round(result)
-        console.log(data)
-        return data
-    }
-    return (
-    <div>
+const AmountLeaseAgreement = ({ initialPay, month, result }) => {
+  const resultAmountLeaseAgreement = () => {
+    const data = initialPay + month * Math.round(result);
+    return data;
+  };
+  return (
+    <>
       <div>Сумма договора лизинга</div>
-        <div className="result__sum">
-            {String(Math.round(resultAmountLeaseAgreement()))}
-            <span>₽</span>
-        </div>
-
-    </div>
+      <div className="result__sum">
+        {String(
+          Math.round(resultAmountLeaseAgreement()).toLocaleString("ru-RU")
+        )}
+        <span>₽</span>
+      </div>
+    </>
   );
 };
 
