@@ -5,8 +5,6 @@
 
 .initialPayment {
     position: relative;
-    /*width: 100%;*/
-    /*padding-right: 70px;*/
 }
 
 .percentInitialPayment {
@@ -19,7 +17,7 @@
     text-align: center;
     padding: 0;
     right: 0;
-    top: 57px;
+    top: 37px;
     width: 69px;
     height: 54px;
 }

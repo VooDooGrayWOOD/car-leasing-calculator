@@ -4,7 +4,7 @@ const environment = {
     priceDefault: 3300000,
     priceStep: 100000,
     feeMin: 10,
-    feeMax: 65,
+    feeMax: 60,
     feeDefault: 13,
     termMin: 1,
     termMax: 60,

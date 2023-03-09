@@ -17,6 +17,8 @@ const LeaseTerm = () => {
           max={environment.termMax}
           label="Срок лизинга"
           value={month}
+          defaultValue={month}
+          style={null}
           onChange={handleChangeMonth}
       />
         <div className="field__unit">мес.</div>

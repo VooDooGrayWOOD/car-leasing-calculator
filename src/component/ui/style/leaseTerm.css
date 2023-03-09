@@ -2,16 +2,3 @@
     position: relative;
     width: 420px;
 }
-
-.field__unit {
-    position: absolute;
-    border: none;
-    font-family: Nekst, sans-serif;
-    font-size: 30px;
-    text-align: center;
-    padding: 0;
-    right: 0;
-    top: 65px;
-    width: 69px;
-    height: 54px;
-}
